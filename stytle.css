@@ -1,0 +1,59 @@
+body {
+  background: rgb(241, 241, 192);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#cellcontainer {
+  height: 320px;
+  width: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.cell {
+  border-bottom: 5px solid black;
+  border-right: 5px solid black;
+  text-align: center;
+  line-height: 100px;
+  font-size: 40px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  cursor: pointer;
+  user-select: none;
+}
+#cellcontainer :nth-child(3n) {
+  border-right: none;
+}
+#cellcontainer :nth-child(n + 7) {
+  border-bottom: none;
+}
+#message {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-left: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: blueviolet;
+}
+.highlight {
+  background-color: rgb(172, 132, 209);
+}
+
+#restartButton {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgb(93, 196, 93);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#restartButton:hover {
+  background-color: blueviolet;
+}
